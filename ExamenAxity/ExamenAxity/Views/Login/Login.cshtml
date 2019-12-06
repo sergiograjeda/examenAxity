@@ -1,0 +1,24 @@
+﻿@model ExamenAxity.Models.UsuarioModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+
+    <div>
+        @Html.TextBoxFor(s => s.Usuario, "", new { placeholder = "Usuario" })
+    </div>
+
+    <div>
+
+        @Html.TextBoxFor(s => s.Password, "", new { type = "password", placeholder = "Password" })
+    </div>
+
+    <div>
+        <input type="submit" value="Entrar" />
+    </div>
+}
